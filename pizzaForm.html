@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="pizzaForm.css">
+	<!DOCTYPE html>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>	
+	<script language="javascript" type="text/javascript" src="pizzaForm.js">
+	</script>
+
+
+</head>
+<body>
+
+<form action= "" id="pizzaform" onsubmit="return false;">
+<fieldset>
+	<legend>Pizza Creations!</legend>
+	<p class="size">
+		Pizza Size <br><input type="radio" name="selectsize" value="15"/>
+		Small pizza ($15)
+		<input type="radio" name="selectsize" value="25" />Medium pizza ($25)
+		<input type="radio" name="selectsize" value="45"/>Large pizza ($45)
+	</p>
+	
+	<p class="crust">
+		Pick A Crust<br>
+		<input type="radio" name="selectcrust" value="0"/>
+		White ($0)
+		<input type="radio" name="selectcrust" value="3.25"/>Wheat($3.25)
+		<input type="radio" name="selectcrust" value="8.50"/>
+		Gluten-free ($8.50)
+	</p>
+
+	<p class="sauce">
+		Choose a Sauce <br>
+		<input type="radio" name="selectsauce" value="4"/>
+		Robust Tomato ($4)
+		<input type="radio" name="selectsauce" value="7.34"/>Spicy BBQ ($7.34)
+		<input type="radio" name="selectsauce" value="1.50"/>Creamy Cream ($1.50)
+	</p>
+
+	
+	<p class="toppings">
+		Toppings?
+		<select id="toppings" name="toppings">
+		<option value="0">Select Topping</option>
+		<option value="0">Pepperoni</option>
+		<option value="2.80">Bacon ($2.80)</option>
+		<option value="0">Salami</option>
+		<option value="0">Ham</option>
+		<option value="4">Soy Cheese ($4)</option>
+		<option value="15">Truffles ($15)</option>
+		<option value="0">Banana Peppers</option>
+		<option value="0">Olives</option>
+		<option value="0">Jalapenos</option>
+		<option value="0">Mushrooms</option>
+		<option value="1">Lobster ($1)</option>
+		<option value="0">Pineapple</option>
+		</select>
+	</p>
+
+
+	<p class="other">
+		More Options
+		<select id="more" name="more">
+		<option value="0" selected>No, Thank you</option>
+		<option value="2">Extra Cheese ($2)</option>
+		<option value="7.50">Add Bread Sticks ($7.50)</option>
+		</select>
+	</p>
+
+
+	<p class="delivery"> 
+		Delivery or Pickup
+		<input type="radio" name="pickup" value="0"/>
+		Pickup 
+		<input type="radio" name="pickup" value="10"/> 
+		Delivery ($10 delivery fee)
+	</p>
+
+
+	<p>
+		Name <input type="text" name="name" required>
+		Address <input type="text" name="address" required>
+		<br>Phone Number <input type="text" name="phonenumber" required>
+		Email <input type="text" email="email" required>
+	</p>
+
+	<p>
+		<span> Leave a special note for the delivery person</span><textarea id="feedback" name="feedback"></textarea>
+	</p>
+
+	<div id="totalPrice"></div>
+
+	<button type="button" >Submit</button>
+</fieldset>
+</form>
+<input type="text" id="total" readonly="readonly"/>
+</body>
+</html>
