@@ -1,23 +1,20 @@
-//problem: make book list that moves read books to finished 
-//list and first book in list to next to be read 
-
 var readingNow = [];
 var booksFinished = [];
 var BookList = ['Great Gatsby','FreakEnomics', 'The Earth Is Flat', 'Eloquent JavaScript' ];
 
-// put in for loop
 
 function readingList(){
 	for(var i = 0; i < BookList.length; i++){
 		
 		console.log(BookList[i]);
 
-		BookList.push('harry potter');
+		BookList.push(Book);
 		console.log(BookList);
 
 
 		readingNow.push(BookList[0]);
-		console.log(readingNOw);
+		readingNow.shift();
+		console.log(readingNow);
 
 		BookList.shift();
 		console.log(BookList);
@@ -28,65 +25,69 @@ function readingList(){
 
 }
 
+//============ Game Ro-Sham-Bo
+var win = ['paper covers rock', 'sissors beats paper', 'rock beats sissors']
 
-
-
-BookList.push('harry potter');
-console.log(BookList);
-
-
-readingNow.push(BookList[0]);
-console.log(readingNOw);
-
-BookList.shift();
-console.log(BookList);
-
-booksFinished.push(readingNow)
-console.log(booksFinished);
-
-
-//
-
-
-var book = [
-	book1: 
-]
-
-BookList = function(bookTitle){
-	this.bookTitle = bookTitle;
-	console.log('book added to list');
+var RoShamBoMaker = function(player, domHand){
+	this.player = player;
+	this.domHand = domHand;
+	this.record = {wins: 0, losses: 0};
+	this.wins = [];
+	this.getRecord = function(){
+		for(var key in this.record){
+			return "Player" + player + "has" + this.record[key] + " " + key 
+			+ " has" + this.record[key] + " losses";
+		}
+	}
+	this.padRecord = function(){
+		this.record.wins +=1;
+	};
+	this.addLoss = function(){
+		this.record.losses += 1;
+	};
 }
 
-var book1 = new BookList('harry potter');
-var book2 = new BookList('great gatsby');
-
-conosle.log(book1.BookList);
-console.log(book2.BookList);
-
-
-
-	readBooks: '',
-	booksNotRead: '',
-
-	//books read
-	//books not read
-	//
+function roShamBoGame(object1, object2){
+	if(object1.domHand === right){
+		console.log(object1.player + " has that right hand advantage");
+	}else if(object2.domHand === left){
+		console.log(object2.player + " has that left hand struggle");
+	}
+	console.log("Get Ready to RO-SHAM-BO!");
 }
 
-Book = function(){
-	title: '',
-	genre: '',
-	author: '',
-	read: true;
-}
+player1 = new RoShamBoMaker("Kevin", "right");
+player2 = new RoShamBoMaker("No Name", "Left");
 
-BookList.add(book){
-	// add to array
-}
+player1.padRecord()
+player2.getRecord()
 
-.finishCurrentBook()
-//after read = true move to read
-//last book read = finished
-//change next book in line to be read
-//next book to be read = moved to first unread book in list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
