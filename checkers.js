@@ -14,27 +14,40 @@ function makeTile(color) {
 
 function createCheckerBoard(n) {
   var tile = null;
-
- for (var i = 0; i < n; i++) {
+  for (var i = 0; i < n; i++) {
     color = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
 
 //   if (i % 2 === 0) {
-//
+
 //        color = "black";
 //   }  else {
 //        color = "red";
-//}
+// }
 
     tile = makeTile(color);
 
-
-
-    console.log(tile);
     document.body.appendChild(tile);
   }
 
 }
 
-createCheckerBoard(81);
+createCheckerBoard(82);
+
+
+function changeColor(n) {
+    var divs = document.getElementsByTagName("div")
+    for(i=0; i<divs.length;i++){
+        divs[i].style.background = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+    }
+    
+// change the background color for each div
+}
+
+
+setInterval(changeColor, 1);
+
+
+
+
 
 

@@ -1,0 +1,55 @@
+body {
+	background-image: url(https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif);
+}
+
+form    {
+
+background: #CCDCCC;
+margin:auto;
+position:relative;
+width:550px;
+height:relative;
+font-family: Ariel, Geneva, sans-serif;
+font-size: 14px;
+line-height: 24px;
+font-weight: bold;
+color: #0294da;
+text-decoration: none;
+border-radius: 10px;
+border-radius: 10px;
+border-radius: 10px;
+padding:10px;
+border: 1px solid #999;
+border: inset 1px solid #333;
+}
+
+textarea#feedback {
+width:375px;
+height:125px;
+}
+textarea.message {
+display:block;
+}
+
+button {
+width:125px;
+position: center;
+right:20px;
+bottom:20px;
+background:#09C;
+color:#fff;
+font-family: Tahoma, Geneva, sans-serif;
+font-weight: bold; 
+height:30px;
+border-radius: 15px;
+border-radius: 15px;
+border-radius: 15px;
+border: 1.5p solid #999;
+margin: auto;
+}
+
+button:hover {
+background:#BCD;
+color:#09C;
+}
+
